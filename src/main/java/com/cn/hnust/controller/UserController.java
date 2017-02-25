@@ -31,7 +31,6 @@ public class UserController {
     @RequestMapping("/login")
     public String login(User user,Model model){
     	user = this.userService.findUser(user);
-    	
     	model.addAttribute("user", user);
     	logger.info(user.getUserImg());
     	return "index";
